@@ -1,23 +1,22 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
   new_hash = {}
-  data.each do |key, value|
+  data.each do |key1, value2|
    
-    value.each do |prop, names|
+    value2.each do |prop3, names4|
  
-      names.each do  |name|
- 
-        if !new_hash[name] 
+      names4.each do  |name5|
+        if !new_hash[name5] 
         
-          new_hash[name] = {}
+          new_hash[name5] = {}
+          binding.pry 
         end 
-        if !new_hash[name][key]
+        if !new_hash[name5][key1]
           
-          new_hash[name][key] = []
+          new_hash[name5][key1] = []
           
       end
-      binding.pry 
-      new_hash[name][key] << prop.to_s 
+      new_hash[name5][key1] << prop3.to_s 
     end 
   end 
   end 
